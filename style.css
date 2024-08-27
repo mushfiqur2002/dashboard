@@ -1,0 +1,722 @@
+:root {
+    --bg-color: #EDF2F9;
+    --bg-color-2: #FEFAF6;
+    --bg-color-3: #C21010;
+    --bg-color-4: #E0F8E9;
+    --bg-color-5: #FFECDF;
+
+    --text-color: #012970;
+    --text-color-2: #1F8E64;
+    --text-color-3: #DF3951;
+
+    --svg-color: #4154F1;
+    --svg-color-2: #2ECA6A;
+    --svg-color-3: #FF8162;
+
+    --link-text-color: #133174;
+    --active-link-text-color: #698FF7;
+
+    --logo-color: #3E7276;
+    --logo-color-2: #84B3B6;
+
+    --container-width: 93%;
+    --large-device-width: 95%;
+    --link-text-size: 1.2rem;
+}
+
+/* === common code === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    background: var(--bg-color);
+    font-family: "Roboto", system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+.title h1 {
+    font-size: 1.1rem;
+}
+
+svg {
+    width: var(--link-text-size);
+    height: var(--link-text-size);
+    fill: var(--link-text-color);
+}
+
+.top_container {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+::-webkit-scrollbar {
+    width: .2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: var(--bg-color);
+}
+
+/* === main container === */
+.main_container {
+    width: 100%;
+    height: 100vh;
+    max-width: var(--large-device-width);
+    display: grid;
+    grid-template-columns: 17% 56% 27%;
+    overflow: hidden;
+}
+
+/* === three of all === */
+.main_container .left_side,
+.main_container .middel_side,
+.main_container .right_side {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* === left side === */
+.main_container .left_side .top_container .logo {
+    font-size: 2rem;
+    color: var(--logo-color);
+}
+
+.main_container .left_side .top_container .logo span {
+    color: var(--logo-color-2);
+}
+
+.main_container .left_side .top_container div #menuBar,
+.main_container .left_side .top_container div #closeBar {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+}
+
+.main_container .left_side .link_container{
+    background: var(--bg-color-2);
+}
+
+.main_container .left_side .link_container ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.main_container .left_side .link_container ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 1rem 1rem;
+    transition: 0.5s;
+}
+
+.main_container .left_side .link_container ul li:last-child {
+    bottom: 0;
+}
+
+.main_container .left_side .link_container ul li:hover,
+.main_container .left_side .link_container ul li.active {
+    background: var(--bg-color);
+    transition: 400ms all ease;
+    position: relative;
+}
+
+.main_container .left_side .link_container ul li.active::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0.2rem;
+    height: 2rem;
+    background: var(--active-link-text-color);
+    border-radius: 5rem;
+}
+
+.main_container .left_side .link_container ul li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0.2rem;
+    height: 2rem;
+    background: var(--active-link-text-color);
+    border-radius: 5rem;
+}
+
+.main_container .left_side .link_container ul li.active a {
+    color: var(--active-link-text-color);
+}
+
+.main_container .left_side .link_container ul li.active a span svg {
+    fill: var(--active-link-text-color);
+}
+
+.main_container .left_side .link_container ul .notification {
+    position: relative;
+}
+
+.main_container .left_side .link_container ul .notification a .msg_count {
+    width: 1.1rem;
+    height: 1.1rem;
+    top: 0.6rem;
+    left: 1.65rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color-3);
+    color: var(--bg-color);
+    position: absolute;
+    font-size: 0.6rem;
+}
+
+.main_container .left_side .link_container ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--link-text-color);
+}
+
+.main_container .left_side .link_container ul li a span {
+    display: flex;
+}
+
+.main_container .middel_side .container,
+.main_container .right_side .container {
+    width: var(--large-device-width);
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* === three of all === */
+.main_container .middel_side .container .context_container,
+.main_container .right_side .container .context_container,
+.main_container .left_side .link_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* === middel side === */
+.main_container .middel_side .container .context_container .box1 {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 1rem;
+}
+
+/* === middel side card style === */
+.main_container .middel_side .container .context_container .box1 .card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color-2);
+    border-radius: .3rem;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .container {
+    width: 85%;
+    height: 90%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .7rem;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .container .title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .title h1 {
+    font-size: 1.1rem;
+    color: var(--link-text-color);
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .icon #icon_div {
+
+    width: 3.2rem;
+    height: 3.2rem;
+    background: var(--icon-bgColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .icon #icon_div svg {
+    fill: var(--svg-fill);
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .icon div:last-child h1 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .progress svg,
+.main_container .middel_side .container .context_container .box1 .card .context .progress p {
+    position: absolute;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .progress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .progress svg circle {
+    stroke-dasharray: 282.74;
+    /* Total length of the stroke (circumference) */
+    stroke-dashoffset: calc(282.74 * 0.88);
+    /* (100 - 12) */
+    stroke-width: 8;
+    stroke: var(--stroke-color);
+    /* Replace with your desired color */
+    fill: none;
+}
+
+.main_container .middel_side .container .context_container .box1 .card .context .progress p {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middel_side .container .context_container .box2,
+.middel_side .container .context_container .box3 {
+    width: 100%;
+    height: 450px;
+    background: var(--bg-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .3rem;
+}
+
+.middel_side .container .context_container .box3 {
+    height: 390px;
+}
+
+.middel_side .container .context_container .box2 .container,
+.middel_side .container .context_container .box3 .container {
+    width: 95%;
+    height: 92%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.middel_side .container .context_container .box2 .container .firstContainer,
+.middel_side .container .context_container .box3 .container .firstContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+    position: relative;
+}
+
+.middel_side .container .context_container .box2 .container .firstContainer .bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+}
+
+.middel_side .container .context_container .box2 .container .firstContainer .bar input {
+    outline: none;
+    font-size: .9rem;
+    padding: .5rem 1.5rem .5rem 1rem;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: .2rem;
+}
+
+.middel_side .container .context_container .box2 .container .firstContainer .bar .search_icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer,
+.middel_side .container .context_container .box3 .container .secondContainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* === middel_side table style === */
+.middel_side .container .context_container .box2 .container .secondContainer table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer table thead tr th {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer table tbody tr td {
+    font-size: .8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: .8rem 0 .8rem 1rem;
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer table tbody tr:nth-child(odd) {
+    background: var(--bg-color);
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer .moreTable {
+    padding: 1rem 0;
+    border-top: 1px solid;
+}
+
+.middel_side .container .context_container .box2 .container .secondContainer .moreTable a {
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.middel_side .container .context_container .box3 .container .secondContainer #chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middel_side .container .context_container .box3 .container .secondContainer #chart div svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* === right side === */
+.right_side {
+    width: 100%;
+    height: 100%;
+}
+
+.main_container .right_side .container {
+    width: 100%;
+}
+
+.main_container .right_side .container .top_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main_container .right_side .container .top_container h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main_container .right_side .container .top_container p {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.main_container .right_side .container .top_container .img_div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main_container .right_side .container .top_container .img_div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_container .right_side .container .context_container,
+.main_container .right_side .container .context_container .context {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--bg-color-2);
+}
+
+.main_container .right_side .container .context_container .context ul {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    margin-top: .6rem;
+    flex-direction: column;
+}
+
+.main_container .right_side .container .context_container .context ul li {
+    width: 100%;
+    height: auto;
+    background: var(--bg-color);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr .25fr;
+    gap: .2rem;
+    place-items: center;
+    padding: .9rem .5rem;
+}
+
+.main_container .right_side .container .context_container .context ul li:nth-child(even) {
+    background: transparent;
+}
+
+.main_container .right_side .container .context_container .context ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main_container .right_side .container .context_container .context ul li p {
+    font-size: .7rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.main_container .right_side .container .context_container .context ul li .poduct,
+.main_container .right_side .container .context_container .context ul li .paymnt {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5rem;
+}
+
+.product_img,
+.payment_img {
+    width: 2.7rem;
+    height: 2.7rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.product_dtls,
+.payment_dtls {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1024px) {
+    .main_container {
+        max-width: 100%;
+    }
+    .main_container .left_side .top_container .logo{
+        font-size: 1.7rem;
+        padding-left: .5rem;
+    }
+    .main_container .right_side .container .top_container{
+        padding-right: .5rem;
+    }
+    .main_container .middel_side .container, 
+    .main_container .right_side .container{
+        width: 100%;
+    }
+    
+.middel_side .container .context_container .box3 .container .secondContainer #chart{
+    width: 540px;
+}
+}
+
+/* ==== device tablet ==== */
+
+@media all and (max-width: 980px) {
+    .main_container {
+        max-width: 98%;
+        grid-template-columns: 5.5% 63.5% 32%;
+    }
+    /* === left side === */
+    .main_container .left_side {
+        width: 100%;
+    }
+
+    .main_container .top_container{
+        height: 6rem;
+        padding: 0;
+    }
+
+    .main_container .left_side .top_container .logo {
+        font-size: 1.6rem;
+        display: none;
+    }
+
+    .main_container .left_side .top_container div #menuBar {
+        margin-left: .5rem;
+        display: inline;
+    }
+
+    .main_container .middel_side .container,
+    .main_container .right_side .container {
+        width: 98%;
+    }
+
+    .main_container .left_side .link_container ul li a .tag_name {
+        display: none;
+    }
+    /* === active === */
+    .main_container.active {
+        grid-template-columns: 25% 42% 33%;
+    }
+
+    .main_container.active .left_side .top_container .logo {
+        display: inline;
+    }
+
+    .main_container.active .left_side .top_container div #menuBar {
+        display: none;
+    }
+
+    .main_container.active .left_side .top_container div #closeBar {
+        display: inline;
+        padding-left: .5rem;
+    }
+
+    .main_container.active .left_side .link_container ul li a .tag_name {
+        display: inline;
+    }
+
+}
+
+
+/* ==== device mobile ==== */
+@media only screen and (max-width: 600px) {
+    .main_container {
+        max-width: 100%;
+        height: 100%;
+        grid-template-columns: 9.47% 1fr;
+    }
+
+    .main_container .top_container{
+        width:-webkit-fill-available;
+        height: 4.5rem;
+        background: var(--bg-color);
+        position: fixed;
+        top: 0;
+        padding: 0;
+        z-index: 111;
+    }
+
+    .main_container .left_side{
+        grid-row: span 2;
+    }
+    
+    .main_container .middel_side .container .top_container .page_name{
+        display: none;
+    }
+
+    .main_container .left_side .link_container,
+    .main_container .middel_side .container .context_container,
+    .main_container .right_side .container .context_container{
+        width: 100%;
+        padding-top: 4.6rem;
+        overflow-y: auto;
+    }
+
+    .main_container .left_side .link_container
+    .main_container .middel_side .container .context_container, 
+    .main_container .right_side .container .context_container{
+        overflow-y: auto;
+    }
+
+    .middel_side .container .context_container .box3 .container .secondContainer #chart{
+        width: 500px;
+        min-width: 400px;
+    }
+
+    /* === active === */
+    .main_container.active {
+        grid-template-columns: 30% 1fr;
+    }
+    .main_container .middel_side .container{
+        align-items: flex-start;
+    }
+    
+
+}

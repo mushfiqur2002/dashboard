@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "customer_id": "#2345",
+        "name": "John Doe",
+        "price": 29.99,
+        "product_name": "Wireless Mouse",
+        "status": "approved"
+    },
+    {
+        "id": 2,
+        "customer_id": "#8673",
+        "name": "Jane Smith",
+        "price": 49.99,
+        "product_name": "Bluetooth Keyboard",
+        "status": "pending"
+    },
+    {
+        "id": 3,
+        "customer_id": "#5421",
+        "name": "Michael Brown",
+        "price": 399.99,
+        "product_name": "4K Monitor",
+        "status": "rejected"
+    },
+    {
+        "id": 4,
+        "customer_id": "#3124",
+        "name": "Emily Davis",
+        "price": 149.99,
+        "product_name": "Gaming Headset",
+        "status": "approved"
+    },
+    {
+        "id": 5,
+        "customer_id": "#7842",
+        "name": "David Wilson",
+        "price": 89.99,
+        "product_name": "Mechanical Keyboard",
+        "status": "pending"
+    },
+    {
+        "id": 6,
+        "customer_id": "#9327",
+        "name": "Sophia Martinez",
+        "price": 199.99,
+        "product_name": "Graphic Tablet",
+        "status": "rejected"
+    },
+    {
+        "id": 7,
+        "customer_id": "#4625",
+        "name": "James Anderson",
+        "price": 59.99,
+        "product_name": "External Hard Drive",
+        "status": "approved"
+    },
+    {
+        "id": 8,
+        "customer_id": "#5876",
+        "name": "Isabella Thompson",
+        "price": 129.99,
+        "product_name": "Smart Watch",
+        "status": "pending"
+    },
+    {
+        "id": 9,
+        "customer_id": "#8341",
+        "name": "Oliver Garcia",
+        "price": 499.99,
+        "product_name": "Gaming Laptop",
+        "status": "rejected"
+    },
+    {
+        "id": 10,
+        "customer_id": "#1934",
+        "name": "Mia Rodriguez",
+        "price": 79.99,
+        "product_name": "Portable Speaker",
+        "status": "approved"
+    }
+]

@@ -1,0 +1,163 @@
+ [
+      {
+        "product": {
+          "id": "P001",
+          "name": "Wireless Bluetooth Headphones",
+          "image_url": "/images/product/wirelessearphone.png",
+          "price": 99.99
+        },
+        "payment": {
+          "method": {
+            "type": "Visa",
+            "image_url": "/images/card/visacard.png"
+          },
+          "card_number": "1234",
+          "purchase_date": "2024-08-24"
+        }
+      },
+      {
+        "product": {
+          "id": "P002",
+          "name": "i phone 12",
+          "image_url": "/images/product/iphone-12.png",
+          "price": 199.99
+        },
+        "payment": {
+          "method": {
+            "type": "MasterCard",
+            "image_url": "/images/card/mastercard.png"
+          },
+          "card_number": "5678",
+          "purchase_date": "2024-08-23"
+        }
+      },
+      {
+        "product": {
+          "id": "P003",
+          "name": "4K Ultra HD TV",
+          "image_url": "/images/product/TV.png",
+          "price": 499.99
+        },
+        "payment": {
+          "method": {
+            "type": "American Express",
+            "image_url": "/images/card/amex.png"
+          },
+          "card_number": "9101",
+          "purchase_date": "2024-08-22"
+        }
+      },
+      {
+        "product": {
+          "id": "P004",
+          "name": "Gaming Laptop",
+          "image_url": "/images/product/laptop.png",
+          "price": 1299.99
+        },
+        "payment": {
+          "method": {
+            "type": "PayPal",
+            "image_url": "/images/card/paypal.png"
+          },
+          "card_number": "2345",
+          "purchase_date": "2024-08-21"
+        }
+      },
+      {
+        "product": {
+          "id": "P005",
+          "name": "Smartphone",
+          "image_url": "/images/product/Smartphone.png",
+          "price": 699.99
+        },
+        "payment": {
+          "method": {
+            "type": "Discover",
+            "image_url": "/images/card/discover.png"
+          },
+          "card_number": "6789",
+          "purchase_date": "2024-08-20"
+        }
+      },
+      {
+        "product": {
+          "id": "P006",
+          "name": "Noise Cancelling Earbuds",
+          "image_url": "/images/product/Earbuds.png",
+          "price": 149.99
+        },
+        "payment": {
+          "method": {
+            "type": "Visa",
+            "image_url": "/images/card/visacard.png"
+          },
+          "card_number": "3456",
+          "purchase_date": "2024-08-19"
+        }
+      },
+      {
+        "product": {
+          "id": "P007",
+          "name": "Digital Camera",
+          "image_url": "/images/product/Camera.png",
+          "price": 799.99
+        },
+        "payment": {
+          "method": {
+            "type": "MasterCard",
+            "image_url": "/images/card/mastercard.png"
+          },
+          "card_number": "7890",
+          "purchase_date": "2024-08-18"
+        }
+      },
+      {
+        "product": {
+          "id": "P008",
+          "name": "Fitness Tracker",
+          "image_url": "/images/product/Tracker.png",
+          "price": 59.99
+        },
+        "payment": {
+          "method": {
+            "type": "American Express",
+            "image_url": "/images/card/amex.png"
+          },
+          "card_number": "1234",
+          "purchase_date": "2024-08-17"
+        }
+      },
+      {
+        "product": {
+          "id": "P009",
+          "name": "Portable Bluetooth Speaker",
+          "image_url": "/images/product/Speaker.png",
+          "price": 89.99
+        },
+        "payment": {
+          "method": {
+            "type": "PayPal",
+            "image_url": "/images/card/paypal.png"
+          },
+          "card_number": "4567",
+          "purchase_date": "2024-08-16"
+        }
+      },
+      {
+        "product": {
+          "id": "P010",
+          "name": "E-Book Reader",
+          "image_url": "/images/product/E-Book.png",
+          "price": 129.99
+        },
+        "payment": {
+          "method": {
+            "type": "Discover",
+            "image_url": "/images/card/discover.png"
+          },
+          "card_number": "8901",
+          "purchase_date": "2024-08-15"
+        }
+      }
+    ]
+  
