@@ -720,3 +720,27 @@ svg {
     
 
 }
+
+@media only screen and (max-width: 450px) {
+    .main_container {
+        max-width: 100%;
+        height: 100%;
+        grid-template-columns: 12% 1fr;
+    }
+    .main_container .middel_side .container .context_container .box1{
+        grid-template-columns: 1fr;
+    }
+    .middel_side .container .context_container .box2, 
+    .middel_side .container .context_container .box3 {
+        height: 100%;
+    }
+    .middel_side .container .context_container .box3 .container .secondContainer #chart{
+        width: 400px;
+    }
+    .main_container.active {
+        max-width: 100%;
+        height: 100%;
+        grid-template-columns: 40% 1fr;
+    }
+
+}
